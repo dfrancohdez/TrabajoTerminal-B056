@@ -6,6 +6,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import PublicRoute from "./components/PublicRoute"; // Importa la ruta pública
 import Informacion from "./pages/Informacion/Informacion";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import IniciarSesion from './pages/IniciarSesion/IniciarSesion';
 
 function App() {
   return (
@@ -17,6 +18,14 @@ function App() {
           element={
             <PublicRoute>
               <Informacion />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/signin"
+          element={
+            <PublicRoute>
+              <IniciarSesion />
             </PublicRoute>
           }
         />

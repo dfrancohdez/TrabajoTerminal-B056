@@ -1,0 +1,27 @@
+$image:'../../assets/background.png';
+.informacion__segundaParte{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0 20px 0;
+
+}
+.informacion__title{
+    text-align: center;
+    margin: 10px 10px 20px 10px;
+}
+.informacion{
+    background: url($image);
+    min-height: 100vh;
+}
+.informacion__terceraParte{
+    display: flex;
+    background-color: white;
+    max-width: 957px;
+    min-height: 264px;
+    border-radius: 25px;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    margin: 0 auto;
+}
+//minmax

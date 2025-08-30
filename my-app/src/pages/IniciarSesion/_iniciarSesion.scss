@@ -1,0 +1,26 @@
+@use '../../global' as g;
+.form__input--borde{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    box-shadow: none !important;
+}
+.form__input--borde:focus{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    box-shadow: none !important;
+}
+input:focus:valid {
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    box-shadow: none !important;
+}
+
+input:focus:invalid {
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    box-shadow: none !important;
+}

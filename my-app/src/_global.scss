@@ -1,3 +1,5 @@
+
+
 $color-secondary:linear-gradient(180deg, rgba(0, 85, 128, 1) 0%, rgba(0, 102, 153, 1) 75%, rgba(0, 153, 230, 1) 100%);
 .font-secondary{
     font-weight: bold;
@@ -20,4 +22,26 @@ $color-secondary:linear-gradient(180deg, rgba(0, 85, 128, 1) 0%, rgba(0, 102, 15
 }
 .tx-blue{
      -webkit-text-stroke: 1px $color-secondary;
+}
+.background{
+    background-color: #D9D9D9;
+    min-height: 100vh;
+}
+*{
+    font-family: 'Raleway';
+}
+.bold{
+    font-weight: bold;
+}
+.input__container{
+    max-width: 869px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: white;
+    margin-bottom: 24px;
+}
+
+p{
+    margin-top: 1rem;
 }

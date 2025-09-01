@@ -13,11 +13,13 @@ const IniciarSesion=()=>{
     setValidated(true);
   };
     return(
-        <div>
+        <div className="background">
             <Header />
-            <form className={`needs-validation ${validated ? "was-validated" : ""}`} noValidate onSubmit={handleSubmit}>
+            <form className={`needs-validation ${validated ? "was-validated" : ""} form__container`} noValidate onSubmit={handleSubmit}>
+                <h2 className="bold">Iniciar sesión</h2>
+                <p>Completa los campos para ingresar a tu cuenta. ¿Aún no tienes una cuenta? crear cuenta</p>
                 <div className="mb-3">
-                    <label htmlFor="email" className="form-label">Correo electrónico</label>
+                    <label htmlFor="email" className="form-label bold">Correo electrónico</label>
                     <input
                     type="email"
                     className="form__input--borde form-control"
@@ -28,7 +30,7 @@ const IniciarSesion=()=>{
                     <div className="invalid-feedback">Por favor, introduce un correo válido.</div>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="password" className="form-label">Contraseña</label>
+                    <label htmlFor="password" className="form-label bold">Contraseña</label>
                     <input
                     type="password"
                     className="form__input--borde form-control"
@@ -39,6 +41,7 @@ const IniciarSesion=()=>{
                     />
                     <div className="invalid-feedback">La contraseña debe tener al menos 6 caracteres.</div>
                 </div>
+                <p>¿olvidaste tu contraseña?</p>
 
                 <button type="submit" className="btn btn-primary">Ingresar</button>
             </form>

@@ -9,7 +9,7 @@ import Informacion from "./pages/Informacion/Informacion";
 //import 'bootstrap/dist/css/bootstrap.min.css';
 import IniciarSesion from './pages/IniciarSesion/IniciarSesion';
 import Registro from './pages/registro/registro';
-import RegistroEmpresa from './pages/registro/RegistroEmpresa/RegistroEmpresa3';
+import RegistroEmpresa from './pages/registro/RegistroEmpresa/RegistroEmpresa';
 import Verify from './pages/Verify/Verify';
 
 function App() {

@@ -1,11 +1,11 @@
 import Header from "../../../components/Header/Header"
 import img from "../../../assets/images/Vector.png"
-const RegistroEmpresa=()=>{
+const RegistroEmpresa3=()=>{
     return(
-        <div>
-            <Header/>
+        <div className="d-flex flex-column align-items-center form__registro">
+           {/* <Header/>
             <div className="background d-flex justify-content-center">
-            <form className="d-flex flex-column align-items-center form__registro">
+            <form className="d-flex flex-column align-items-center form__registro">*/}
                 <p className="bold">Información de la cuenta</p>
                 <div className="input__container">
                     <label htmlFor="nombreEmpresa" className="form-label bold">Dirección</label>
@@ -68,11 +68,11 @@ const RegistroEmpresa=()=>{
                     <button className="btn btn-primary mb-3">Atrás</button>
                     <button className="btn btn-primary mb-3">Enviar</button>
                 </div>
-                
+            {/*    
             </form>
 
-            </div>
+            </div>*/}
         </div>
     )
 }
-export default RegistroEmpresa;
+export default RegistroEmpresa3;

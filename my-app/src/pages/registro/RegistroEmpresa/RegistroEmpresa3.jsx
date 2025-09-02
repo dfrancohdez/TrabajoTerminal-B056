@@ -1,18 +1,14 @@
 import Header from "../../../components/Header/Header"
-
+import img from "../../../assets/images/Vector.png"
 const RegistroEmpresa=()=>{
     return(
         <div>
             <Header/>
             <div className="background d-flex justify-content-center">
             <form className="d-flex flex-column align-items-center form__registro">
-                <div className="input__container mt-3">
-                    <h3 className="bold">Impulsa el crecimiento de tu empresa con el talento adecuado</h3>
-                    <p>Completa este formulario para crear el perfil de tu empresa y formar parte de nuestra red. </p>
-                </div>
-                <p className="bold">Información general</p>
+                <p className="bold">Información de la cuenta</p>
                 <div className="input__container">
-                    <label htmlFor="nombreEmpresa" className="form-label bold">Nombre de la empresa</label>
+                    <label htmlFor="nombreEmpresa" className="form-label bold">Dirección</label>
                     <input
                     type="text"
                     className="form__input--borde form-control"
@@ -24,7 +20,7 @@ const RegistroEmpresa=()=>{
                 </div>
 
                 <div className="input__container">
-                    <label htmlFor="nombreEmpresa" className="form-label bold">Sector o industria</label>
+                    <label htmlFor="nombreEmpresa" className="form-label bold">Página web(opcional)</label>
                     <input
                     type="text"
                     className="form__input--borde form-control"
@@ -37,7 +33,7 @@ const RegistroEmpresa=()=>{
 
 
                 <div className="input__container">
-                    <label htmlFor="nombreEmpresa" className="form-label bold">Descripción de la empresa</label>
+                    <label htmlFor="nombreEmpresa" className="form-label bold">Contraseña</label>
                     <input
                     type="text"
                     className="form__input--borde form-control"
@@ -48,9 +44,31 @@ const RegistroEmpresa=()=>{
                     <div className="invalid-feedback">Por favor, introduce un nombre válido.</div>
                     
                 </div>
-
+                <div className="w-100">
+                <label htmlFor="logo" className="input__container d-flex flex-column" style={{width:"179px",height:"163px"}}>
+                    <div className="bold">Logo </div>
+                    <div style={{margin:"0 auto"}}>
+                        <img style={{width:"70px"}} src={img}></img>
+                    </div>  
+                </label>    
+                   
+                    
+                <input
+                    type="file"
+                    className="form__input--borde form-control"
+                    id="logo"
+                    placeholder=""
+                    required
+                    style={{display:'none'}}
+                />
+                <div className="invalid-feedback">Por favor, introduce un nombre válido.</div>
+                </div>
                 
-                <button className="btn btn-primary mb-3">Siguiente</button>
+                <div className="d-flex justify-content-around w-100">
+                    <button className="btn btn-primary mb-3">Atrás</button>
+                    <button className="btn btn-primary mb-3">Enviar</button>
+                </div>
+                
             </form>
 
             </div>

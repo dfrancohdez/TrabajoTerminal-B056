@@ -6,13 +6,9 @@ const RegistroEmpresa=()=>{
             <Header/>
             <div className="background d-flex justify-content-center">
             <form className="d-flex flex-column align-items-center form__registro">
-                <div className="input__container mt-3">
-                    <h3 className="bold">Impulsa el crecimiento de tu empresa con el talento adecuado</h3>
-                    <p>Completa este formulario para crear el perfil de tu empresa y formar parte de nuestra red. </p>
-                </div>
-                <p className="bold">Información general</p>
+                <p className="bold">Datos de contacto</p>
                 <div className="input__container">
-                    <label htmlFor="nombreEmpresa" className="form-label bold">Nombre de la empresa</label>
+                    <label htmlFor="nombreEmpresa" className="form-label bold">Nombre del representante</label>
                     <input
                     type="text"
                     className="form__input--borde form-control"
@@ -24,7 +20,7 @@ const RegistroEmpresa=()=>{
                 </div>
 
                 <div className="input__container">
-                    <label htmlFor="nombreEmpresa" className="form-label bold">Sector o industria</label>
+                    <label htmlFor="nombreEmpresa" className="form-label bold">Cargo en la empresa</label>
                     <input
                     type="text"
                     className="form__input--borde form-control"
@@ -37,7 +33,7 @@ const RegistroEmpresa=()=>{
 
 
                 <div className="input__container">
-                    <label htmlFor="nombreEmpresa" className="form-label bold">Descripción de la empresa</label>
+                    <label htmlFor="nombreEmpresa" className="form-label bold">Teléfono de contacto</label>
                     <input
                     type="text"
                     className="form__input--borde form-control"
@@ -49,8 +45,23 @@ const RegistroEmpresa=()=>{
                     
                 </div>
 
+                <div className="input__container">
+                    <label htmlFor="nombreEmpresa" className="form-label bold">Correo electrónico</label>
+                    <input
+                    type="text"
+                    className="form__input--borde form-control"
+                    id="nombreEmpresa"
+                    placeholder=""
+                    required
+                    />
+                    <div className="invalid-feedback">Por favor, introduce un nombre válido.</div>
+                    
+                </div>
+                <div className="d-flex justify-content-around w-100">
+                    <button className="btn btn-primary mb-3">Atrás</button>
+                    <button className="btn btn-primary mb-3">Siguiente</button>
+                </div>
                 
-                <button className="btn btn-primary mb-3">Siguiente</button>
             </form>
 
             </div>

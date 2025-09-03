@@ -11,6 +11,7 @@ import IniciarSesion from './pages/IniciarSesion/IniciarSesion';
 import Registro from './pages/registro/registro';
 import RegistroEmpresa from './pages/registro/RegistroEmpresa/RegistroEmpresa';
 import Verify from './pages/Verify/Verify';
+import ResetPassword from './pages/ResetPassword/ResetPassword';
 
 function App() {
   return (
@@ -54,6 +55,14 @@ function App() {
           element={
             <PublicRoute>
               <Verify />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/reset-password"
+          element={
+            <PublicRoute>
+              <ResetPassword />
             </PublicRoute>
           }
         />

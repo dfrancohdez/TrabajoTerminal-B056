@@ -1,6 +1,6 @@
 import Header from "../../../components/Header/Header"
 import img from "../../../assets/images/Vector.png"
-const RegistroEmpresa3=()=>{
+const RegistroEmpresa3=({handleChange,formData,prevStep,nextStep})=>{
     return(
         <div className="d-flex flex-column align-items-center form__registro">
            {/* <Header/>
@@ -14,6 +14,9 @@ const RegistroEmpresa3=()=>{
                     className="form__input--borde form-control"
                     id="nombreEmpresa"
                     placeholder="Bancomer"
+                    name="direccion"
+                    value={formData.direccion}
+                    onChange={handleChange}
                     required
                     />
                     <div className="invalid-feedback">Por favor, introduce un nombre válido.</div>
@@ -26,6 +29,9 @@ const RegistroEmpresa3=()=>{
                     className="form__input--borde form-control"
                     id="nombreEmpresa"
                     placeholder=""
+                    name="pagina"
+                    value={formData.pagina}
+                    onChange={handleChange}
                     required
                     />
                     <div className="invalid-feedback">Por favor, introduce un nombre válido.</div>
@@ -39,6 +45,9 @@ const RegistroEmpresa3=()=>{
                     className="form__input--borde form-control"
                     id="nombreEmpresa"
                     placeholder=""
+                    name="contraseña"
+                    value={formData.contraseña}
+                    onChange={handleChange}
                     required
                     />
                     <div className="invalid-feedback">Por favor, introduce un nombre válido.</div>
@@ -58,6 +67,9 @@ const RegistroEmpresa3=()=>{
                     className="form__input--borde form-control"
                     id="logo"
                     placeholder=""
+                    name="logo"
+                    value={formData.logo}
+                    onChange={handleChange}
                     required
                     style={{display:'none'}}
                 />
@@ -65,8 +77,8 @@ const RegistroEmpresa3=()=>{
                 </div>
                 
                 <div className="d-flex justify-content-around w-100">
-                    <button className="btn btn-primary mb-3">Atrás</button>
-                    <button className="btn btn-primary mb-3">Enviar</button>
+                    <button onClick={prevStep} className="btn btn-primary mb-3">Atrás</button>
+                    <button type="submit" onClick={nextStep} className="btn btn-primary mb-3">Enviar</button>
                 </div>
             {/*    
             </form>

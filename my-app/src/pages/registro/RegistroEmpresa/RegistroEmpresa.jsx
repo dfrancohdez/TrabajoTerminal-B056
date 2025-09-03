@@ -29,11 +29,17 @@ const handleChange = (e) => {
     });
     console.log(formData)
   };
+  const handleSubmit = (e) => {
+  e.preventDefault(); // evita que se recargue la página
+
+  // aquí puedes mandar formData a tu backend o validarlo
+  console.log("Formulario enviado con los datos:", formData);
+  }
     return(
         <div>
             <Header/>
             <div className="background d-flex justify-content-center">
-            <form className="d-flex flex-column align-items-center form__registro">
+            <form className="d-flex flex-column align-items-center form__registro" onSubmit={handleSubmit}>
                 {step === 1 && (<div><div className="input__container mt-3">
                     <h3 className="bold">Impulsa el crecimiento de tu empresa con el talento adecuado</h3>
                     <p>Completa este formulario para crear el perfil de tu empresa y formar parte de nuestra red. </p>
@@ -85,10 +91,14 @@ const handleChange = (e) => {
                     <div className="invalid-feedback">Por favor, introduce un nombre válido.</div>
                     
                 </div>
-                <button onClick={nextStep} className="btn btn-primary mb-3">Siguiente</button>
+                 <div className="d-flex justify-content-around w-100">
+                    <div style={{width:"63.88px",color:"#D9D9D9"}}>Atras</div>
+                    <button onClick={nextStep} className="btn btn-primary mb-3">Siguiente</button>
+                </div>
+                
                 </div>)}
                 {step === 2 && (<RegistroEmpresa2 prevStep={prevStep} nextStep={nextStep} handleChange={handleChange} formData={formData}/>)}
-                <RegistroEmpresa3 />
+                {step === 3 && (<RegistroEmpresa3 prevStep={prevStep} nextStep={nextStep} handleChange={handleChange} formData={formData}/>)}
             </form>
 
             </div>

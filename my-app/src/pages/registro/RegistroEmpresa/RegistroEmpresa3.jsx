@@ -1,6 +1,6 @@
 import Header from "../../../components/Header/Header"
 import img from "../../../assets/images/Vector.png"
-const RegistroEmpresa3=({handleChange,formData,prevStep,nextStep})=>{
+const RegistroEmpresa3=({handleChange,formData,prevStep,handleRegister})=>{
     return(
         <div className="d-flex flex-column align-items-center form__registro">
            {/* <Header/>
@@ -70,7 +70,7 @@ const RegistroEmpresa3=({handleChange,formData,prevStep,nextStep})=>{
                     name="logo"
                     value={formData.logo}
                     onChange={handleChange}
-                    required
+                    
                     style={{display:'none'}}
                 />
                 <div className="invalid-feedback">Por favor, introduce un nombre válido.</div>
@@ -78,7 +78,7 @@ const RegistroEmpresa3=({handleChange,formData,prevStep,nextStep})=>{
                 
                 <div className="d-flex justify-content-around w-100">
                     <button onClick={prevStep} className="btn btn-primary mb-3">Atrás</button>
-                    <button type="submit" onClick={nextStep} className="btn btn-primary mb-3">Enviar</button>
+                    <button type="submit" onClick={handleRegister} className="btn btn-primary mb-3">Enviar</button>
                 </div>
             {/*    
             </form>

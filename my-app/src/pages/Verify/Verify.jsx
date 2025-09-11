@@ -1,20 +1,9 @@
 import Header from "../../components/Header/Header";
 import { useState } from "react";
 import './_verify.scss'
-const Verify = ()=>{
-    const [validated, setValidated] = useState(false);
-        const handleSubmit = (event) => {
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        setValidated(true);
-      };
+const Verify = ({handleConfirmCode,handleChange,code})=>{
     return(
-        <div className="background">
-            <Header />
-            <form className={`needs-validation ${validated ? "was-validated" : ""} form__container--h-auto`} noValidate onSubmit={handleSubmit}>
+            <div className="form__container--h-auto form__registro">
                 <h2 className="bold">Verifica tu cuenta</h2>
                 <p>Ingresa el código que enviamos a tu correo.</p>
                 <div className="mb-3">
@@ -24,15 +13,14 @@ const Verify = ()=>{
                     className="form__input--borde form-control"
                     id="email"
                     placeholder="1234"
+                    value={code}
+                    onChange={handleChange}
                     required
                     />
                     <div className="invalid-feedback">Por favor, introduce un código válido.</div>
                 </div>
-
-
-                <button type="submit" className="btn btn-primary">Ingresar</button>
-            </form>
-        </div>
+                <button type="submit" onClick={handleConfirmCode} className="btn btn-primary">Ingresar</button>
+            </div>
     )
 }
 export default Verify;

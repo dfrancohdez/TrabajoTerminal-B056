@@ -170,7 +170,7 @@ const handleChangeCode = (e) => {
                 
                 </div>)}
                 {step === 2 && (<RegistroEmpresa2 prevStep={prevStep} nextStep={nextStep} handleChange={handleChange} formData={formData}/>)}
-                {step === 3 && (<RegistroEmpresa3 prevStep={prevStep} handleRegister={nextStep} handleChange={handleChange} formData={formData}/>)}
+                {step === 3 && (<RegistroEmpresa3 prevStep={prevStep} handleRegister={handleRegister} handleChange={handleChange} formData={formData}/>)}
                 {step === 4 && (<Verify handleConfirmCode={handleConfirmCode} handleChange={handleChangeCode} code={code}/>)}
             </form>
                   

@@ -12,6 +12,7 @@ import Registro from './pages/registro/registro';
 import RegistroEmpresa from './pages/registro/RegistroEmpresa/RegistroEmpresa';
 import Verify from './pages/Verify/Verify';
 import ResetPassword from './pages/ResetPassword/ResetPassword';
+import Home from './pages/home/Home';
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
           }
         />
         <Route
-          path="/signin"
+          path="/login"
           element={
             <PublicRoute>
               <IniciarSesion />
@@ -43,7 +44,7 @@ function App() {
           }
         />
         <Route
-          path="/signupempresa"
+          path="/signup-empresa"
           element={
             <PublicRoute>
               <RegistroEmpresa />
@@ -66,7 +67,22 @@ function App() {
             </PublicRoute>
           }
         />
-
+        <Route
+          path="/signup"
+          element={
+            <PublicRoute>
+              <Registro />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/home"
+          element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          }
+        />
         {/* Rutas protegidas cuando el usuario está logueado */}
         {/* <Route
           path="/dashboard"

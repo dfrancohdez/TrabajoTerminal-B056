@@ -1,0 +1,4 @@
+@use '../../../app' as g;
+.myTable thead{
+    background-color: g.$primary;
+}

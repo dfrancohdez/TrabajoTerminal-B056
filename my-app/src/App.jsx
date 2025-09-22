@@ -17,6 +17,8 @@ import Home from './pages/home/Home';
 import InicioEmpresa from './pages/InicioEmpresa/InicioEmpresa';
 import InicioEstudiante from './pages/InicioEstudiante/InicioEstudiante';
 import MisVacantes from './pages/Empresa/MisVacantes/MisVacantes';
+import Mensajeria from './pages/Mensajeria/Mensajeria';
+import Chatbot from './pages/Estudiante/Chatbot/Chatbot';
 
 function App() {
   return (
@@ -100,6 +102,22 @@ function App() {
           element={
             <PublicRoute>
               <InicioEstudiante />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/mensajeria"
+          element={
+            <PublicRoute>
+              <Mensajeria />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/estudiante/chatbot"
+          element={
+            <PublicRoute>
+              <Chatbot />
             </PublicRoute>
           }
         />

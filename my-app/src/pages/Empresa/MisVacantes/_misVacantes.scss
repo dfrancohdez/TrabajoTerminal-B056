@@ -1,4 +1,4 @@
-@use '../../../app' as g;
-.myTable thead{
-    background-color: g.$primary;
+.table-primary {
+  --bs-table-bg: #0E3D55; // tu color
+  --bs-table-color: #fff; // texto en blanco
 }
